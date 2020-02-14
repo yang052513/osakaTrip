@@ -1,0 +1,44 @@
+[debug] [2020-02-14T20:48:45.835Z] ----------------------------------------------------------------------
+[debug] [2020-02-14T20:48:45.836Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2020-02-14T20:48:45.836Z] CLI Version:   7.8.1
+[debug] [2020-02-14T20:48:45.836Z] Platform:      darwin
+[debug] [2020-02-14T20:48:45.836Z] Node Version:  v12.13.0
+[debug] [2020-02-14T20:48:45.837Z] Time:          Fri Feb 14 2020 12:48:45 GMT-0800 (Pacific Standard Time)
+[debug] [2020-02-14T20:48:45.837Z] ----------------------------------------------------------------------
+[debug] [2020-02-14T20:48:45.837Z] 
+[debug] [2020-02-14T20:48:45.842Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-14T20:48:45.843Z] > authorizing via signed-in user
+[debug] [2020-02-14T20:48:45.843Z] [iam] checking project osakat17 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2020-02-14T20:48:45.844Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/osakat17:testIamPermissions  
+
+[debug] [2020-02-14T20:48:45.968Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-14T20:48:45.971Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/osakat17  
+ 
+[debug] [2020-02-14T20:48:46.090Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'osakat17'...
+[info] 
+[info] i  deploying database, hosting
+[info] i  database: checking rules syntax...
+[debug] [2020-02-14T20:48:46.096Z] >>> HTTP REQUEST PUT https://osakat17.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2020-02-14T20:48:46.476Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules syntax for database osakat17 is valid
+[debug] [2020-02-14T20:48:46.480Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/osakat17/versions  
+
+[debug] [2020-02-14T20:48:47.231Z] <<< HTTP RESPONSE 200
+[info] i  hosting[osakat17]: beginning deploy...
+[info] i  hosting[osakat17]: found 474 files in .
+[debug] [2020-02-14T20:48:47.383Z] [hosting] hash cache [] stored for 474 files
+[debug] [2020-02-14T20:48:47.384Z] [hosting][hash queue][FINAL]
+[debug] [2020-02-14T20:48:47.384Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/osakat17/versions/26491a24f6b7f49b:populateFiles  
+ <request body omitted>
+[debug] [2020-02-14T20:48:48.630Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-14T20:48:48.702Z] [hosting][populate queue][FINAL]
+[debug] [2020-02-14T20:48:48.702Z] [hosting] uploads queued: 405
